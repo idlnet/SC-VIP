@@ -33,10 +33,10 @@ clear;clear;clear
 
   # // Banner
 echo -e "${YELLOW}----------------------------------------------------------${NC}"
-echo -e "  Welcome To IDL VPN ${YELLOW}(${NC}${green} Stable Edition ${NC}${YELLOW})${NC}"
+echo -e "  Welcome To IDLNET VPN ${YELLOW}(${NC}${green} Stable Edition ${NC}${YELLOW})${NC}"
 echo -e " This Will Quick Setup VPN Server On Your Server"
-echo -e "  Author : ${green}IDL VPN® ${NC}${YELLOW}(${NC} ${green} TunellVpn ${NC}${YELLOW})${NC}"
-echo -e " © Recode By Yinn Vpn®${YELLOW}(${NC} 2024 ${YELLOW})${NC}"
+echo -e "  Author : ${green}IDLNET VPN® ${NC}${YELLOW}(${NC} ${green} TunellVpn ${NC}${YELLOW})${NC}"
+echo -e " © Recode By idlnet vpn®${YELLOW}(${NC} 2024 ${YELLOW})${NC}"
 echo -e "${YELLOW}----------------------------------------------------------${NC}"
 echo ""
 sleep 2
@@ -96,9 +96,9 @@ clear
 #########################
 # USERNAME
 rm -f /usr/bin/user
-username=$(curl https://raw.githubusercontent.com/imam022/new/main/regis | grep $MYIP | awk '{print $2}')
+username=$(curl https://raw.githubusercontent.com/idlnet/SC-VIP/edit/main/regis | grep $MYIP | awk '{print $2}')
 echo "$username" >/usr/bin/user
-expx=$(curl https://raw.githubusercontent.com/imam022/new/main/regis | grep $MYIP | awk '{print $3}')
+expx=$(curl https://raw.githubusercontent.com/idlnet/SC-VIP/edit/main/regis | grep $MYIP | awk '{print $3}')
 echo "$expx" >/usr/bin/e
 # DETAIL ORDER
 username=$(cat /usr/bin/user)
@@ -122,7 +122,7 @@ mai="datediff "$Exp" "$DATE""
 Info="(${green}Active${NC})"
 Error="(${RED}ExpiRED${NC})"
 today=`date -d "0 days" +"%Y-%m-%d"`
-Exp1=$(curl https://raw.githubusercontent.com/imam022/new/main/regis | grep $MYIP | awk '{print $4}')
+Exp1=$(curl https://raw.githubusercontent.com/idlnet/SC-VIP/edit/main/regis | grep $MYIP | awk '{print $4}')
 if [[ $today < $Exp1 ]]; then
 sts="${Info}"
 else
@@ -131,7 +131,7 @@ fi
 echo -e "\e[32mloading...\e[0m"
 clear
 # REPO    
-    REPO="https://raw.githubusercontent.com/imam022/new/main/"
+    REPO="https://raw.githubusercontent.com/idlnet/SC-VIP/edit/main/"
 
 ####
 start=$(date +%s)
@@ -310,8 +310,8 @@ clear
 clear
 #GANTI PASSWORD DEFAULT
 restart_system() {
-    USRSC=$(wget -qO- https://raw.githubusercontent.com/imam022/new/main/regis | grep $ipsaya | awk '{print $2}')
-    EXPSC=$(wget -qO- https://raw.githubusercontent.com/imam022/new/main/regis | grep $ipsaya | awk '{print $3}')
+    USRSC=$(wget -qO- https://raw.githubusercontent.com/idlnet/SC-VIP/edit/main/regis | grep $ipsaya | awk '{print $2}')
+    EXPSC=$(wget -qO- https://raw.githubusercontent.com/idlnet/SC-VIP/edit/main/regis | grep $ipsaya | awk '{print $3}')
     TIMEZONE=$(printf '%(%H:%M:%S)T')
     TEXT="
 <code>────────────────────</code>
@@ -328,7 +328,7 @@ restart_system() {
 <b>⚡© Contact Yinn Tunneling</b>
 <code>────────────────────</code>
 <i>Automatic Notification From Github ⚡</i>
-"'&reply_markup={"inline_keyboard":[[{"text":"Order🐳","url":"https://t.me/YinnVpn"},{"text":"Grub Tele🐦","url":"https://t.me/+W2kGWFfnTJlhMTBl"}]]}'
+"'&reply_markup={"inline_keyboard":[[{"text":"Order🐳","url":"https://t.me/idlvpn"},{"text":"Grub Tele🐦","url":"https://t.me/+W2kGWFfnTJlhMTBl"}]]}'
     curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
 }
 clear
@@ -534,7 +534,7 @@ print_success "Password SSH"
 function udp_mini(){
 clear
 print_install "Memasang Service Limit Quota"
-wget raw.githubusercontent.com/imam022/new/main/limit/limit.sh && chmod +x limit.sh && ./limit.sh
+wget raw.githubusercontent.com/idlnet/SC-VIP/edit/main/limit/limit.sh && chmod +x limit.sh && ./limit.sh
 
 cd
 wget -q -O /usr/bin/limit-ip "${REPO}limit/limit-ip"
