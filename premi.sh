@@ -17,10 +17,7 @@ GRAY="\e[1;30m"
 NC='\e[0m'
 red='\e[1;31m'
 green='\e[0;32m'
-TIMES="10"
-CHATID="-1002092950564"
-KEY="6552005211:AAGLiCWOpcfR_PEeUx89Hocoe7mMDtsCHm4"
-URL="https://api.telegram.org/bot$KEY/sendMessage"
+
 # ===================
 clear
   # // Exporint IP AddressInformation
